@@ -27,7 +27,7 @@ def is_open(ip,port):
         return True
     except ConnectionError :
         return False
-    
+
 if not is_open("127.0.0.1",8000):
     print("Server Not Running - Start gunicorn first '$./server.sh'\n ")
     sys.exit()
@@ -50,7 +50,7 @@ def user_input()->str:
 # Main Driver
 
 if __name__=="__main__":
-    
+
 
     # User's long URL to shorten
     input_url = user_input()

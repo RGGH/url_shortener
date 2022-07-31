@@ -1,6 +1,4 @@
 """ URL Shortener API """
-from typing import Optional
-from pydantic import BaseModel
 from fastapi import FastAPI
 from fastapi import HTTPException
 from functions import json_url_lookup, gen_short_url
