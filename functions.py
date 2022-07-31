@@ -17,9 +17,9 @@ def parse_base_url(starting_url : str)->str:
     return shorter_url
 
 # Load JSON file find the matching longer URL
-def json_url_lookup(shortened_url:str)->str:
+def json_url_lookup(short_url:str)->str:
     """Function to return the longer url from the shorter url"""
-    dct = [json.loads(line) for line in open("map_urls.json","r",encoding="utf-8") if shortened_url in line]
+    dct = [json.loads(line) for line in open("map_urls.json","r",encoding="utf-8") if short_url in line]
     long_url = (dct[0]['long_url'])
     
     return long_url
