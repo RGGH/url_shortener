@@ -23,4 +23,3 @@ def json_url_lookup(short_url:str)->str:
         if short_url in line]
     long_url = (dct[0]['long_url'])
     return long_url
-
