@@ -14,7 +14,7 @@ print("."*20)
 print("-"*2 + " URL Shortener " + "-"*2)
 print("."*20 + "\n")
 
-# API Endpoint to shorten URL 
+# API Endpoint to shorten URL
 PREFIX_URL = "http://127.0.0.1:8000/api-1.0/"
 
 # Check if server is running
@@ -89,3 +89,4 @@ if __name__=="__main__":
 
     # print with decode to remove the b'
     print(f"Here is your original, LONGER url :\n\n {response.decode('utf-8')}\n")
+    

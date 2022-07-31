@@ -9,7 +9,7 @@ def gen_short_url(num_of_chars: int)->str:
     """ Generate short_id of specified number of characters"""
     return ''.join(choice(string.ascii_letters+string.digits) for _ in range(num_of_chars))
 
-# Chop up the URL into just scheme + netloc 
+# Chop up the URL into just scheme + netloc
 def parse_base_url(starting_url : str)->str:
     """ Extract the hostname from the URL """
     sections = urlparse(starting_url)
@@ -23,3 +23,4 @@ def json_url_lookup(short_url:str)->str:
         if short_url in line]
     long_url = (dct[0]['long_url'])
     return long_url
+
