@@ -33,3 +33,4 @@ async def visit_shortened(short_url):
     long_url = json_url_lookup(short_url)
     print(long_url)
     return long_url
+
