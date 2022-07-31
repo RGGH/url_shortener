@@ -23,3 +23,4 @@ def test_example_url():
     test_url = "http://127.0.0.1:8000/api-1.0/test"
     resp = client.get(test_url)
     assert len(resp.content) == 18
+    
