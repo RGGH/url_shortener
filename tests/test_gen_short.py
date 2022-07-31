@@ -1,7 +1,8 @@
 """ Test the path shortener & base url parser """
 from functions import gen_short_url, parse_base_url
 
-EXAMPLE = "https://meta.stackexchange.com/questions/118594/data-explorer-truncates-links-after-380-characters"
+EXAMPLE = "https://meta.stackexchange.com/questions"\
+        "/118594/data-explorer-truncates-links-after-380-characters"
 
 def test_gen_short_url():
     """ test the short path function """
