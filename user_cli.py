@@ -18,11 +18,11 @@ print("."*20 + "\n")
 PREFIX_URL = "http://127.0.0.1:8000/api-1.0/"
 
 # Check if server is running
-def is_open(ip,port):
+def is_open(server_ip,port):
     """ Check gunicorn is up """
     sckt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
-        sckt.connect((ip, int(port)))
+        sckt.connect((server_ip, int(port)))
         sckt.shutdown(2)
         return True
     except ConnectionError :
@@ -39,8 +39,8 @@ def user_input()->str:
     valid = False
     while not valid:
         user_url = input("Enter a url to shorten and press ENTER\n")
-        REGEX = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
-        url = re.findall(REGEX,user_url)
+        reg_ex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
+        url = re.findall(reg_ex,user_url)
         if not url:
             print("Not a Valid URL")
         else:
